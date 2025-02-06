@@ -1,11 +1,15 @@
 function stringChop(str, size) {
-  // your code here
-	let chunks = [];
-    for (let i = 0; i < str.length; i += size) {
-        chunks.push(str.substring(i, i + size)); // Extract chunks of 'size' length
+    let result = [];
+	 if (!str) { 
+        return result;
     }
-    return chunks;
-
+    
+    for (let i = 0; i < str.length; i += size) {
+		let string=str.slice(i, i + size)
+        result.push(string);
+    }
+    
+    return result;
 }
 // // Do not change the code below
 const str = prompt("Enter String.");
